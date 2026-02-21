@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chrome-cookies-to-playwright"
+version = "0.1.0"
+description = "Export Chrome cookies to Playwright storage state format (macOS)"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+authors = [
+    { name = "Richard Liu" },
+]
+keywords = ["chrome", "cookies", "playwright", "browser", "testing"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Testing",
+]
+dependencies = [
+    "browser-cookie3",
+]
+
+[project.scripts]
+chrome-cookies-to-playwright = "chrome_cookies_to_playwright.main:main"
+
+[project.urls]
+Homepage = "https://github.com/richardzone/chrome-cookies-to-playwright"
+Repository = "https://github.com/richardzone/chrome-cookies-to-playwright"
+Issues = "https://github.com/richardzone/chrome-cookies-to-playwright/issues"
