@@ -48,7 +48,14 @@ chrome-cookies-to-playwright --domain github.com
 chrome-cookies-to-playwright --profile "Profile 1" --output ./cookies.json
 ```
 
-### Using the output with Playwright
+### Using with Playwright CLI
+
+```bash
+# Load cookies into a running playwright-cli session
+uvx chrome-cookies-to-playwright && playwright-cli state-load /tmp/chrome-cookies-state.json
+```
+
+### Using with Playwright API
 
 ```python
 # Python

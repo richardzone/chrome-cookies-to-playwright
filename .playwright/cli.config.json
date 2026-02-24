@@ -1,0 +1,10 @@
+{
+  "browser": {
+    "browserName": "chromium",
+    "userDataDir": "~/.playwright/chrome-profile",
+    "launchOptions": {
+      "headless": false,
+      "channel": "chrome"
+    }
+  }
+}
