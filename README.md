@@ -50,10 +50,14 @@ chrome-cookies-to-playwright --profile "Profile 1" --output ./cookies.json
 
 ### Using with Playwright CLI
 
+This repo includes a [`.playwright/cli.config.json`](.playwright/cli.config.json) that configures [playwright-cli](https://github.com/microsoft/playwright-cli) with a persistent headed Chrome profile at `~/.playwright/chrome-profile`.
+
 ```bash
-# Load cookies into a running playwright-cli session
+# Export cookies and load them into the persistent profile
 uvx chrome-cookies-to-playwright && playwright-cli state-load /tmp/chrome-cookies-state.json
 ```
+
+You only need to run this once (or when cookies expire). After that, `playwright-cli open` will use the persisted cookies automatically.
 
 ### Using with Playwright API
 
