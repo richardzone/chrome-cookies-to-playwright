@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "chrome-cookies-to-playwright"
-version = "0.1.1"
+version = "0.2.0"
 description = "Export Chrome cookies to Playwright storage state format (macOS)"
 readme = "README.md"
 license = "MIT"
@@ -29,6 +29,9 @@ classifiers = [
 dependencies = [
     "browser-cookie3",
 ]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
 
 [project.scripts]
 chrome-cookies-to-playwright = "chrome_cookies_to_playwright.main:main"
